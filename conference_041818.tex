@@ -1,0 +1,125 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\setlist[enumerate]{label*=\arabic*.}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Survey and Taxonomy of Papers on Cyber Anomaly Detection\
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Wayne R. Havey III}
+\IEEEauthorblockA{\textit{UCCS}\\
+Colorado Springs, CO \\
+whavey@uccs.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+Detection papers can be categorized by their selection of a few key elements. What they are detecting, the data needed to perform the detection, the methods used to perform analysis on that data, and specific tools to implement those methods. Additional surveys, taxonomies, and case studies can still fall under the proposed taxonomy. As far as the author knows there has been no single effort to classify detection papers using all of the above mentioned categories. This paper will provide a more complete taxonomy for which a potential researcher, academic or professional, can use to classify detection literature. This taxonomy can be used as an approach to determine if the researcher has done their due diligence in understanding and even implementing enough strategies to detect the gamut of attack types. 
+\end{abstract}
+
+\section{Introduction}
+In an ever increasing cyber landscape just like in any increasing population crime increases. Methods to detect crime vary by type of crime. A detective doesnt use the same methods to track a serial killer as he/she does to a petty thief. The detective looks for different types of clues, asks different questions to different people, and will enlist different tiers of resources to help track down the suspect. The cyber "detective", should think in the same terms. This papers goal is to assist the cyber detective in understanding how to ensure they can catch every criminal. Of course crime slips through, but just as a nation enlists the support of multiple entities with different skill sets to attempt to catch every type of criminal (FBI, CIA, Police, Military, etc.), it should define the requirements for detecting every type of cyber crime. 
+
+\section{Attack Types}
+Environment specific. Mission system, IOT, air gapped, using risk/vuln analysis, multiple environments.
+\begin{enumerate}
+    \item DOS
+    \begin{enumerate}
+        \item distributed
+        \item CPU Exhaust
+    \end{enumerate}
+    \item APT
+    \item C2
+    \item Malware
+    \item Web
+    \item Embedded
+    \item Zero Days
+    \item Side Channel
+    \item Botnets
+    \item RATS
+    \item Insider threat
+    \item Multiple or All
+\end{enumerate}
+\section{Data to Collect}
+Vendor specific, OS types. Understanding format, helpful to convert to specific format. Data types could be found within each other. Event IDs could potentially be another category.
+\begin{enumerate}
+    \item Host Logs
+    \item Application Logs
+    \item Syscalls
+    \item Device logs
+    \begin{enumerate}
+        \item Network devices
+        \item IOT
+        \item mobile
+    \end{enumerate}
+    \item Network flow
+    \item Performance metrics
+    \item Resource consumption
+\end{enumerate}
+\section{Detection Methods}
+Ever growing, Automation, Hybrids, Analyst training/understanding the human factor. Alerting.
+\begin{enumerate}
+    \item Machine Learning
+    \begin{enumerate}
+        \item Training\\
+        Darpa data set
+        \item Algorithms
+        \begin{enumerate}
+            \item Random Forest
+            \item K-means
+        \end{enumerate}
+        \item clustering
+        \item classifying
+    \end{enumerate}
+    \item Analytics
+    \item Attack Graphs
+    \item Data Organization
+    \item Architecture
+    \item Query Languages
+    \item Behavior definition
+    \item Tagging
+    \item Honey Tech
+    \item White Lists
+    \item Temporality
+\end{enumerate}
+\vspace{5mm}
+\section{Tools}
+Recent, popular, novel.
+\begin{enumerate}
+    \item SIEM
+    \item Weka
+    \item Spark
+    \item Hadoop
+    \item Commercial
+\end{enumerate}
+\section{The Taxonomy}
+Beginning with what to detect, define data needed, then define methods to perform analysis on the data, find specific tools to assist with implementation. Each step could be recursive. A fully monitored system(s) should be able to cover every attack type, thus defining every data source and method needed and tools that can assist. 
+\section{The Taxonomy as a Logic Diagram/FSM/automaton/flow chart?}
+\section{Application In Research}
+Future research could apply model as figure in paper so quick scan reveals their goal. Classification of enough literature could reveal where research is lacking, stale, old, or over-saturated. 
+\section{Application in Development and Testing}
+Model applied to define requirements for a monitoring platform. Could be applied to define tests. Ensure analytics created for everything. Comparison of tools. Define analyst training.
+
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{survey}
+\end{document}
