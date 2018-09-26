@@ -34,82 +34,90 @@ whavey@uccs.edu}
 
 \begin{abstract}
 Detection papers can be categorized by their selection of a few key elements. What they are detecting, the data needed to perform the detection, the methods used to perform analysis on that data, and specific tools to implement those methods. Additional surveys, taxonomies, and case studies can still fall under the proposed taxonomy. As far as the author knows there has been no single effort to classify detection papers using all of the above mentioned categories. This paper will provide a more complete taxonomy for which a potential researcher, academic or professional, can use to classify detection literature. This taxonomy can be used as an approach to determine if the researcher has done their due diligence in understanding and even implementing enough strategies to detect the gamut of attack types. 
+\footnote{I realize this is fairly broad but I believe the classification is still very useful at this level for people interested in 'Detect'}
 \end{abstract}
 
 \section{Introduction}
-In an ever increasing cyber landscape just like in any increasing population crime increases. Methods to detect crime vary by type of crime. A detective doesnt use the same methods to track a serial killer as he/she does to a petty thief. The detective looks for different types of clues, asks different questions to different people, and will enlist different tiers of resources to help track down the suspect. The cyber "detective", should think in the same terms. This papers goal is to assist the cyber detective in understanding how to ensure they can catch every criminal. Of course crime slips through, but just as a nation enlists the support of multiple entities with different skill sets to attempt to catch every type of criminal (FBI, CIA, Police, Military, etc.), it should define the requirements for detecting every type of cyber crime. 
+\footnote{not sure about this analogy for the intro}
+In an ever increasing cyber landscape just like in any increasing population, the level crime increases with it. Methods to detect crime vary by type of crime. A detective doesnt use the same methods to track a serial killer as he/she does to track a petty thief. The detective looks for different types of clues, asks different questions to different people, and will enlist different tiers of resources to help track down the suspect. The cyber "detective", should think in the same terms. This papers goal is to assist the cyber detective in understanding how to ensure they can catch every criminal. Of course crime slips through, but just as a nation enlists the support of multiple entities with different skill sets to attempt to catch every type of criminal (FBI, CIA, Police, Military, etc.), it should define the requirements for detecting every type of cyber crime. 
 
 \section{Attack Types}
-Environment specific. Mission system, IOT, air gapped, using risk/vuln analysis, multiple environments.
+Environment specific (Wireless, P2p, etc.). Mission system, IOT, air gapped, using risk/vuln analysis, multiple environments. \cite{lazarevic2005intrusion}\cite{mitchell2014survey}\cite{axelsson2000intrusion}
 \begin{enumerate}
-    \item DOS
+    \item DOS \cite{zargar2013survey}\cite{warrender1999detecting}\cite{lee1999data}
     \begin{enumerate}
         \item distributed
         \item CPU Exhaust
     \end{enumerate}
-    \item APT
-    \item C2
-    \item Malware
-    \item Web
+    \item Surveillance \& Probing \cite{lazarevic2005intrusion}
+    \item APT\cite{jasek2013apt}\cite{saud2015towards}\cite{kim2013detection}
+    \item C2 \cite{chen2014study}\cite{jasek2013apt}\cite{bhatt2014towards}
+    \item Malware\cite{gabriel2009analyzing}\cite{tankard2011advanced}
+        \item Web
     \item Embedded
-    \item Zero Days
+    \item Zero Days\cite{kotenko2012common}\cite{chen2014study}\cite{jeun2012practical}
     \item Side Channel
-    \item Botnets
-    \item RATS
-    \item Insider threat
+    \item Botnets\cite{singh2014big}\cite{awad2017network}
+    \item RATS\cite{wu2017detecting}
+    \item Insider threat\cite{mukherjee1994network}
     \item Multiple or All
 \end{enumerate}
 \section{Data to Collect}
 Vendor specific, OS types. Understanding format, helpful to convert to specific format. Data types could be found within each other. Event IDs could potentially be another category.
 \begin{enumerate}
-    \item Host Logs
-    \item Application Logs
-    \item Syscalls
-    \item Device logs
+    \item Host Logs\cite{jia2017big}\cite{marchetti2016analysis}
+    \item Application Logs\cite{giura2012context}\cite{ten2010cybersecurity}
+        \begin{enumerate}
+            \item agents\cite{garcia2009anomaly}
+            \begin{enumerate}
+                \item honeypot\cite{jasek2013apt}
+            \end{enumerate}
+        \end{enumerate}
+    \item Syscalls\cite{warrender1999detecting}\cite{hofmeyr1998intrusion}
+    \item Device\cite{horne2002management}
     \begin{enumerate}
         \item Network devices
         \item IOT
         \item mobile
     \end{enumerate}
-    \item Network flow
-    \item Performance metrics
-    \item Resource consumption
+    \item Network flow \cite{kim2013detection}
+    \item Performance Counters
 \end{enumerate}
 \section{Detection Methods}
-Ever growing, Automation, Hybrids, Analyst training/understanding the human factor. Alerting.
+Ever growing, Automation, Hybrids, Analyst training and understanding the human factor. Alerting.
 \begin{enumerate}
-    \item Machine Learning
+    \item Machine Learning\cite{buczak2016survey}\cite{dua2016data} 
     \begin{enumerate}
         \item Training\\
         Darpa data set
         \item Algorithms
         \begin{enumerate}
-            \item Random Forest
-            \item K-means
+            \item Random Forest \cite{singh2014big}
+            \item K-means\cite{asif2011filtering}\cite{hajamydeen2016unsupervised}
         \end{enumerate}
-        \item clustering
+        \item clustering \cite{asif2011filtering}   
         \item classifying
     \end{enumerate}
-    \item Analytics
-    \item Attack Graphs
+    \item Analytics\cite{cardenas2013big}
+    \item Attack Graphs\cite{abraham2015predictive}
     \item Data Organization
     \item Architecture
-    \item Query Languages
-    \item Behavior definition
+    \item Query Languages\cite{mukherjee1994network}
+    \item Behavior definition (vs whitelist?)
     \item Tagging
-    \item Honey Tech
-    \item White Lists
-    \item Temporality
+    \item Honey Tech \cite{jasek2013apt}\cite{saud2015towards}
+    \item White Lists\cite{yen2013beehive}
+    \item Temporality\cite{abraham2015predictive}\cite{abraham2014cyber}
+    \item Algorithms\cite{kim2013detection}
 \end{enumerate}
-\vspace{5mm}
 \section{Tools}
 Recent, popular, novel.
 \begin{enumerate}
-    \item SIEM
-    \item Weka
-    \item Spark
-    \item Hadoop
-    \item Commercial
+    \item SIEM \cite{kotenko2012attack}
+    \item Weka \cite{asif2011filtering}\cite{thevar2017effect}
+    \item Spark \cite{gupta2016framework}\cite{dobson2018performance}
+    \item Hadoop \cite{gupta2014big}\cite{tankard2012big}
+    \item Commercial 
 \end{enumerate}
 \section{The Taxonomy}
 Beginning with what to detect, define data needed, then define methods to perform analysis on the data, find specific tools to assist with implementation. Each step could be recursive. A fully monitored system(s) should be able to cover every attack type, thus defining every data source and method needed and tools that can assist. 
@@ -119,7 +127,157 @@ Future research could apply model as figure in paper so quick scan reveals their
 \section{Application in Development and Testing}
 Model applied to define requirements for a monitoring platform. Could be applied to define tests. Ensure analytics created for everything. Comparison of tools. Define analyst training.
 
-\nocite{*}
+\section{Paper List}
+\begin{enumerate}
+    \item 
+    PERFORMS: Machine Learning (Naive Bayes and frequent sequence algorithm) \\ 
+    ON: Network flow data\\ 
+    DETECTING: RATs 
+    \cite{wu2017detecting} 
+    \item 
+    PERFORMS: multiple data modeling methods (defining normal behavior)\\ 
+    ON: system calls\\ 
+    DETECTING: abnormal behavior 
+    \cite{warrender1999detecting}
+    \item  
+    PERFORMS: Machine learning\\ 
+    ON: Web server logs (application logs e.g apache)\\ DETECTING: Web based attacks 
+    \cite{kruegel2003anomaly}
+    \item 
+    PERFORMS:Machine learning - classification (k-nearest neighbors)\\ 
+    ON: Netflow data (streamed)\\ 
+    DETECTING: Attacks - DOS,User to root, remote to local,Probing\\ 
+    USING: Apache Spark 
+    \cite{thevar2017effect} 
+    \item 
+    PERFORMS: Data analysis algorithm (analytics)\\ 
+    ON: Network Flow data (ingress \& egress points),Email logs,syslog (privesc)\\ 
+    DETECTING: APT \cite{kim2013detection} 
+    \item 
+    PERFORMS: Machine Learning\\ 
+    ON: Multisource\\ 
+    DETECTING: Abnormal Behavior\\ 
+    USING: spark 
+    \cite{jia2017big} 
+    \item 
+    PERFORMS: Machine Learning (Markov Chain building normal profile)\\ 
+    ON: audit data (unix)\\ 
+    DETECTING: Abnormal Behavior \cite{ye2004robustness}
+    \item 
+    PERFORMS: Machine Learning (random forest)\\ 
+    ON: Network flow data\\ 
+    DETECTING:Botnets (p2p)\\ 
+    USING: mahout, hadoop, HIVE 
+    \cite{singh2014big}
+    \item 
+    PERFORMS: Analytics (not very in depth)\\ 
+    ON: Web Server (application) logs\\ 
+    DETECTING: Insider threat 
+    \cite{myers2009towards}
+    \item 
+    PERFORMS: Analytics (not well defined)\\ 
+    ON: Multisource (firewall,netflow, not well defined)\\ DETECTING: APT/Zero Days \cite{ahn2014big} 
+    \item 
+    PERFORMS: Machine Learning\\ 
+    ON: Performance Counters\\ 
+    DETECTING: Malware 
+    \cite{demme2013feasibility}
+    \item 
+    PERFORMS: ML Classification\\ 
+    ON: Binary metadata\\ 
+    DETECTING: New malware binaries (windows) \cite{schultz2001data}
+    \item 
+    PERFORMS: analytics\\ 
+    ON: Netflow data\\ 
+    DETECTING: probing, suspicious behavior\\ 
+    USING: honeypot/net \cite{hieb2004anomaly}
+    \item 
+    PERFORMS: Vulnerability Analysis and Attack Graph Analysis\\ 
+    ON: nessus data (application), host logs, network device logs (not well defined)\\ 
+    DETECTING: malicious behavior \cite{jajodia2009topological}
+    \item 
+    PERFORMS: novel query language\\ 
+    ON: multiple source logs (not well defined)\\ 
+    DETECTING: malicious behavior \cite{gao2018saql}
+    \item 
+    PERFORMS: New architecture (embedded systems) performing analytics real time\\ 
+    ON: syscall data\\ 
+    DETECTING: Malicious execution \cite{rahmatian2012hardware}
+    \item 
+    PERFORMS: Data organization, feature extraction, Machine learning (clustering k-means)\\ 
+    ON: Multisource logs (well defined)\\ 
+    DETECTING: Suspicious (specifically states only suspicious)\\ 
+    USING: SIEM \cite{yen2013beehive}
+    \item 
+    PERFORMS: ML (supervised learning)  \\
+    ON: API calls  \\
+    DETECTING: Zero-day malware \\
+    \cite{alazab2011zero}
+    \item
+    PERFORMS: Analytics (normal behavior) \\
+    ON: Performance Counters (branch miss predictions, instruction TLB (iTLB) misses and L2 cache misses, very well defined) \\
+    DETECTING: Code-injection, return to libc, return oriented programming attacks (very well defined)  \\
+    USING: Novel tool Eumonia 
+    \cite{yuan2011security}
+    \item
+    PERFORMS:  ML (TCM-KNN)\\
+    ON: netflow, application (bro) \\
+    DETECTING: mutliple attack types (very well defined: Probes, DoS (Denial of Service), U2R (User to Root) and
+R2L (Remote to Local))
+    \cite{li2007network}
+    \item
+    PERFORMS: Machine Learning (2 Anomaly detection, supervised learning) (analytics: correlation of l3 cache misses b/t 2 processes)  \\
+    ON: Performance Counters  \\
+    DETECTING: Cache Based Side Channel Attacks (in title) (flush and reload) 
+    \cite{chiappetta2016real}
+    \item
+    PERFORMS: Attack modeling data organization \\
+    ON: Specifically states ALL data collectable \\
+    DETECTING: APT
+    \cite{giura2012context}
+    \item
+    PERFORMS: Generic honeypot Alerting \\
+    ON: netflow data \\
+    DETECTING: APT \\
+    USING: KFSensor
+    \cite{saud2015towards}
+    \item
+    PERFORMS: ML  \\
+    ON: Temporal Netflow data (bro)  \\
+    DETECTING: U2R, R2L, DOS, Probing
+    \cite{lee1999data}
+    \item
+    PERFORMS: Special Architecture, event correlation (analytics)  \\
+    ON:  Multisource log data\\
+    DETECTING:  APT
+    \cite{bhatt2014towards}
+    \item
+    PERFORMS: Data organization and ML \\
+    ON: States multisource (appears to be mostly netflow data from applications)  \\
+    DETECTING: anomalies
+    \cite{hajamydeen2016unsupervised}   
+    \item
+    PERFORMS: Temporal data organization (multiple methods compared)  \\
+    ON: Alerts \\
+    DETECTING: anomalies
+    \cite{pierazzi2016exploratory}
+    \item
+    PERFORMS: ML,DeepL,nueral net,  \\
+    ON: multisource logs \\
+    DETECTING: cyber anomalies
+    \cite{du2017deeplog}
+    \item
+    PERFORMS: ML Markov Chain Model  \\
+    ON: Binary data \\
+    DETECTING: ROP chaining 
+    \cite{usui2016poster}
+    \item
+    PERFORMS: Graphing, ML classification \\
+    ON: System and Network level events (not well defined) \\
+    DETECTING: Malware Downloads
+    \cite{rahbarinia2016real}
+\end{enumerate}
+
 \bibliographystyle{IEEEtran}
-\bibliography{survey}
+\bibliography{survey_bibtex}
 \end{document}
