@@ -1,0 +1,13 @@
+\newif\ifrev
+%%%%%%%%%%%%%%%%%%
+% COMMENT OUT NEXT LINE TO HIDE comments
+\revtrue
+%%%%%%%%%%%%%%%%%%
+\newcommand{\urlwofont}[1]{\underline{\urlstyle{same}\url{#1}}}
+\ifrev
+  \newcommand{\yanyan}[1]{{\color{blue} [Yanyan: #1]}}
+  \newcommand{\wayne}[1]{{\color{red} [Wayne: #1]}}
+\else
+  \newcommand{\yanyan}[1]{}
+  \newcommand{\wayne}[1]{}
+\fi
