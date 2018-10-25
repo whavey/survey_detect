@@ -1,0 +1,429 @@
+
+
+\section{Examples of the Taxonomy Applied}
+\begin{enumerate}
+    \item 
+    Detecting remote access trojans through external control at area network borders\cite{wu2017detecting} \\
+    Environment: General IT (inferred) \\
+    Anomaly Type: Malware 
+    \begin{itemize}
+        \item Subcategory: RATs
+    \end{itemize}  
+    Data source: Network flow data\\ 
+    Detection Method: Machine Learning
+    \begin{itemize}
+        \item Subcategory: Naive Bayes and frequent sequence algorithm
+    \end{itemize} 
+    Tool: General Algorithm
+    
+    \item 
+    Detecting Intrusions using System Calls: Alternative Data Models\cite{warrender1999detecting}\\
+    Environment: General IT (inferred)\\
+    Anomaly Type: Abnormal behavior \\
+    Data Source: Host based 
+    \begin{itemize}
+        \item system calls
+    \end{itemize}
+    Detect Method: Machine Learning
+    \begin{itemize}
+        \item Sequence Time Delay embedding
+        \item t-stide
+        \item RIPPER
+        \item Hidden Markov Model
+    \end{itemize} 
+    Tool: General Algorithms
+    
+    \item  
+    Anomaly Detection of Web-based Attacks\cite{kruegel2003anomaly}\\
+    Environment: General IT (inferred) \\   
+    Anomaly Type: Specific Threat 
+    \begin{itemize}
+        \item Web based attacks
+    \end{itemize}
+    Data Source: Application
+    \begin{itemize}
+        \item Web server logs (Apache)
+    \end{itemize}
+    Detect Method: Machine learning\\
+    Tool: General Algorithm
+    
+    \item 
+    The Effect of K-Nearest Neighbors Classifier for Intrusion Detection of Streaming of Net-Flows in the Apache Spark Environment\cite{thevar2017effect} \\
+    Environment: General IT (inferred) \\
+    Anomaly Type: Specific Threat
+    \begin{itemize}
+        \item DOS
+        \item User to root
+        \item remote to local
+        \item Probing
+    \end{itemize} 
+    Data Source: Network Based
+    \begin{itemize}
+        \item Netflow data (streamed)
+    \end{itemize} 
+    Detect Method: Machine Learning
+    \begin{itemize}
+        \item K-Nearest Neighbors
+    \end{itemize}[]
+    Tool: Apache Spark 
+    
+    
+    \item 
+    Detection of Advanced Persistent Threat by Analyzing the Big Data Log\cite{kim2013detection}\\
+    Environment: General IT (inferred)\\
+    Anomaly Type: APT  \\
+    Data Source: Network Based
+    \begin{itemize}
+        \item Flow data (ingress \& egress points)
+    \end{itemize}
+    Data Source: Application
+    \begin{itemize}
+        \item Email logs
+    \end{itemize}
+    Data Source: Host Based
+    \begin{itemize}
+        \item Syslog (privilege escalation logs)
+    \end{itemize}
+    Detect Method: Analytics
+    \begin{itemize}
+        \item Data analysis algorithm
+    \end{itemize}
+    Tool: General Algorithm
+    
+    \item 
+    Big-data analysis of multi-source logs for anomaly detection on network-based system\cite{jia2017big}\\
+    Environment: General IT \\
+    Anomaly Type: General Behavior - Suspicious (stated abnormal)\\ 
+    Data Source: Multisource\\ 
+    Detect Method: Machine Learning\\ 
+    Tool: Apache Spark 
+    
+    
+    \item 
+    Robustness of the Markov-chain model for cyber-attack detection\cite{ye2004robustness}\\
+    Environment: General IT\\
+    Anomaly Type: General Behavior - Suspicious (abnormal) \\
+    Data Source: Host Based\\
+    \begin{itemize}
+        \item Unix-Based Audit data
+    \end{itemize}
+    Detect Method: Machine Learning \\
+    \begin{itemize}
+        \item Markov Chain (building normal profile)
+    \end{itemize}
+    Tool: Algorithms implemented in C++
+    
+    \item 
+    Big Data Analytics framework for Peer-to-Peer Botnet detection using Random Forests\cite{singh2014big}\\
+    Environment:General IT (inferred)\\
+    Anomaly Type: Specific Threat
+    \begin{itemize}
+        \item Botnets (p2p)
+    \end{itemize}\
+    Data Source: Network 
+    \begin{itemize}
+        \item flow data
+    \end{itemize}
+    Detect Method: Machine Learning 
+    \begin{itemize}
+        \item random forest
+    \end{itemize}
+    Tool: mahout, hadoop, HIVE 
+    
+    \item 
+    Towards insider threat detection using web server logs\cite{myers2009towards}\\
+    Environment: General IT \\
+    Anomaly Type: Insider threat \\
+    Data Source: Application
+    \begin{itemize}
+        \item Web Server logs
+    \end{itemize}
+    Detect Method: Analytics (not very in depth)\\ 
+    Tool: Not relevant
+    
+    \item 
+    Big data analysis system concept for detecting unknown attacks\cite{ahn2014big}\\
+    Environment: General IT \\
+    Anomaly Type: APT (Focus on Zero Days) \\
+    Data Source: All
+    Detect Method: Analytics (not well defined)\\ 
+    Tool: Nothing specified
+    
+    \item 
+    On the feasibility of online malware detection with performance counters\cite{demme2013feasibility}\\
+    Environment: Mobile\\
+    Anomaly Type: Malware \\
+    Data Source: Host Based
+    \begin{itemize}
+        \item Performance Counters
+    \end{itemize}
+    Detect Method: Machine Learning\\ 
+    Tool: General Algorithm
+    
+    \item 
+    Data mining methods for detection of new malicious executables\cite{schultz2001data}\\
+    Environment: General IT\\
+    Anomaly Type: Malware (Focus on New Windows malware binaries)\\
+    Data Source: Outside Environment
+    \begin{itemize}
+        \item Binary metadata
+    \end{itemize}
+    Detect Method: Machine Learning
+    \begin{itemize}
+        \item Classification
+    \end{itemize}
+    Tool: General Algorithm
+    
+    \item 
+    Anomaly based intrusion detection for network monitoring using a dynamic honeypot.\cite{hieb2004anomaly}\\
+    Environment: General IT\\
+    Anomaly Type: Specific Threat
+    \begin{itemize}
+        \item Probing
+    \end{itemize}
+    Anomaly Type: General Behavior - Suspicious
+    Data Source: Network Based
+    \begin{itemize}
+        \item Netflow Data
+    \end{itemize}
+    Detect Method: Honey Tech\\ 
+    Tool: honeypot/net 
+    
+    \item 
+    Topological Vulnerability Analysis: A Powerful New Approach For Network Attack Prevention, Detection, and Response\cite{jajodia2009topological}\\
+    Environment: General IT\\
+    Anomaly Type: General Behavior - Malicious \\
+    Data Source: Application
+    \begin{itemize}
+        \item Nessus
+    \end{itemize}
+    Data Source: Host Based
+    Data Source: Network Based
+    \begin{itemize}
+        \item Network Device Logs
+    \end{itemize}
+    Detect Method: Vulnerability Analysis and Attack Graph Analysis\\ 
+    Tool: Custom
+    
+    \item 
+    SAQL: A Stream-based Query System for Real-Time Abnormal System Behavior Detection\cite{gao2018saql}\\
+    Environment: General IT\\
+    Anomaly Type: General Behavior - Malicious \\
+    Data Source: Multiple source logs (not well defined)\\
+    Detect Method: Support Method - Query language\\ 
+    Tool: Custom
+    
+    \item 
+    Hardware-Assisted Detection of Malicious Software in Embedded Systems\cite{rahmatian2012hardware}\\
+    Environment: Embedded Systems\\
+    Anomaly Type: Malicious execution \\
+    Data Source: Host Based
+    \begin{itemize}
+        \item Syscall data
+    \end{itemize}
+    Detect Method: Support Method 
+    \begin{itemize}
+        \item Architecture
+    \end{itemize}
+    Detect Method: Analytics
+    Tool: FPGA Design
+    
+    \item 
+    Beehive: large-scale log analysis for detecting suspicious activity in enterprise networks\cite{yen2013beehive}\\
+    Environment: General IT\\
+    Anomaly Type: General Behavior - Suspicious (specifically states only suspicious)\\
+    Data Source: Multisource logs (well defined)\\
+    Detect Method: Data organization
+    \begin{itemize}
+        \item Feature extraction
+    \end{itemize}
+    Detect Method: Machine learning 
+    \begin{itemize}
+        \item clustering k-mean
+    \end{itemize}
+    Tool: SIEM 
+    
+    \item 
+    Zero-day malware detection based on supervised learning algorithms of API call signatures\cite{alazab2011zero}\\
+    Environment: General IT\\
+    Anomaly Type: Malware
+    \begin{itemize}
+        \item Zero Days
+    \end{itemize}
+    Data Source: Host Based
+    \begin{itemize}
+        \item API Calls
+    \end{itemize}
+    Detect Method: Machine Learning (supervised learning)  \\
+    Tool: Weka
+    
+    \item
+    Security Breaches as PMU Deviation: Detecting and Identifying Security Attacks Using Performance Counters\cite{yuan2011security}\\
+    Environment:General IT\\
+    Anomaly Type: Specific threat
+    \begin{itemize}
+        \item Code-injection
+        \item return to libc
+        \item return oriented programming attacks (very well defined)
+    \end{itemize}
+    Data Source: Host Based
+    \begin{itemize}
+        \item Performance Counters (branch miss predictions, instruction TLB (iTLB) misses and L2 cache misses, very well defined) \\
+    \end{itemize}
+    Detect Method: Analytics (normal behavior) \\
+    Tool: Novel tool Eumonia 
+   
+    
+    \item
+    Network anomaly detection based on TCM-KNN algorithm\cite{li2007network}\\
+    Environment: General IT\\
+    Anomaly Type: Specific Threat
+    \begin{itemize}
+        \item Probes
+        \item DoS (Denial of Service)
+        \item U2R (User to Root)
+        \item R2L (Remote to Local))\\
+    \end{itemize}
+    Data Source: Network Based
+    \begin{itemize}
+        \item netflow
+    \end{itemize}
+    Data Source: Application
+    \begin{itemize}
+        \item Bro
+    \end{itemize}
+    Detect Method:  Machine Learning (TCM-KNN)\\
+    Tool: Bro
+    
+    \item
+    Real time detection of cache-based side-channel attacks using hardware performance counters\cite{chiappetta2016real}\\
+    Environment: General IT\\
+    Anomaly Type: Specific Threat
+    \begin{itemize}
+        \item Cache Based Side Channel Attacks (in title) (flush and reload)
+    \end{itemize}
+    Data Source: Host Based
+    \begin{itemize}
+        \item Performance Counters
+    \end{itemize}
+    Detect Method: Machine Learning (supervised learning) 
+    Detect Method: analytics
+    Tool: Specified architecture
+    
+    \item
+    A Context-Based Detection Framework for Advanced Persistent Threats\cite{giura2012context}\\
+    Environment: General IT\\
+    Anomaly Type: APT\\
+    Data Source: Specifically states ALL data collectable \\
+    Detect Method: Support method
+    \begin{itemize}
+        \item data organization
+    \end{itemize}
+    Tool: Not relevant
+    
+    \item
+    Towards proactive detection of advanced persistent threat (APT) attacks using honeypots\cite{saud2015towards}\\
+    Environment: General IT\\
+    Anomaly Type: APT \\
+    Data Source: Network Based
+    \begin{itemize}
+        \item Netflow data
+    \end{itemize}
+    Detect Method: Honeypot
+    Tool: KFSensor
+    
+    \item
+    A data mining framework for building intrusion detection models\cite{lee1999data}\\
+    Environment: General IT\\
+    Anomaly Type: Specific Threat
+    \begin{itemize}
+        \item U2R
+        \item R2L
+        \item DOS
+        \item Probing
+    \end{itemize}
+    Data Source: Network Based
+    \begin{itemize}
+        \item Netflow data (temporal)
+    \end{itemize}
+    Detect Method: Machine Learning  \\
+    Tool: Bro
+    
+    \item
+    Towards a Framework to Detect Multi-stage Advanced Persistent Threats Attacks\cite{bhatt2014towards}\\
+    Environment: General IT\\
+    Anomaly Type:  APT\\
+    Data Source:  Multisource log data (not well defined)\\
+    Detect Method: Support Method
+    \begin{itemize}
+        \item Architecture
+    \end{itemize}
+    Detect Method: Analytics
+    Tool: Hadoop
+    
+    \item
+    An unsupervised heterogeneous log-based framework for anomaly detection\cite{hajamydeen2016unsupervised}\\
+    Environment: General IT\\
+    Anomaly Type: General Behavior (anomalies)\\
+    Data Source: States multisource (appears to be mostly netflow data from applications)  \\
+    Detect Method: Support method 
+    \begin{itemize}
+        \item Data Organization
+    \end{itemize}
+    Detect Method: Machine Learning
+    Tool: General Algorithm
+    
+    \item
+    Exploratory security analytics for anomaly detection\cite{pierazzi2016exploratory}\\
+    Environment: General IT\\
+    Anomaly Type: General Behavior (anomalies)\\
+    Data Source: Application
+    \begin{itemize}
+        \item Alerts\\
+        A unique data source among the literature surveyed. This paper proposes a method that uses alerts that could have been generated from any data source as its primary one.
+    \end{itemize}
+    Detect Method: Support Method
+    \begin{itemize}
+        \item Temporal Data organization (comparison of multiple)
+    \end{itemize}
+    Tool: General Approach
+    
+    \item
+    DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning\cite{du2017deeplog}\\
+    Environment: General IT\\
+    Anomaly Type: General behavior (anomalies)\\
+    Data Source: Inferring host based logs (not well defined) \\
+    Detect Method: Machine Learning 
+    \begin{itemize}
+        \item Neural Network
+    \end{itemize}
+    Tool: General Algorithm
+    
+    \item
+    Attack Detection and Identification in Cyber-Physical Systems\cite{pasqualetti2013attack}\\
+    Environment: Cyber Physical Systems\\
+    Anomaly Type: Specific Threat
+    \begin{itemize}
+        \item ROP chaining
+    \end{itemize}
+    Data Source: Outside Environment
+    \begin{itemize}
+        \item Binary Data
+    \end{itemize}
+    Detect Method: Machine Learning
+    \begin{itemize}
+        \item Markov Chain Model
+    \end{itemize}
+    Tool: General Framework
+    
+    \item
+    Real-Time Detection of Malware Downloads via Large-Scale URL->File->Machine Graph Mining\cite{rahbarinia2016real}\\
+    Environment: General IT\\
+    Anomaly Type: Malware
+    \begin{itemize}
+        \item Download of Malware
+    \end{itemize}
+    Detect Method: Machine Learning (classification) \\
+    Data Source: System and Network level events (not well defined) \\
+    Tool: General Approach
+\end{enumerate}

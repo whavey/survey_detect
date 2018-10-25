@@ -1,0 +1,67 @@
+\documentclass[10pt]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{float}
+\setlist[enumerate]{label*=\arabic*.}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\newif\ifrev
+%%%%%%%%%%%%%%%%%%
+% COMMENT OUT NEXT LINE TO HIDE comments
+\revtrue
+%%%%%%%%%%%%%%%%%%
+\newcommand{\urlwofont}[1]{\underline{\urlstyle{same}\url{#1}}}
+\ifrev
+  \newcommand{\yanyan}[1]{{\color{blue} [Yanyan: #1]}}
+  \newcommand{\wayne}[1]{{\color{red} [Wayne: #1]}}
+\else
+  \newcommand{\yanyan}[1]{}
+  \newcommand{\wayne}[1]{}
+\fi
+
+\begin{document}
+\title{Survey and Taxonomy of Cyber Anomaly Detection}
+
+\author{\IEEEauthorblockN{Wayne R. Havey III}
+\IEEEauthorblockA{\textit{UCCS}\\
+Colorado Springs, CO \\
+whavey@uccs.edu}
+}
+\maketitle
+
+\input{abstract}
+\input{introduction}
+\input{more_comprehensive_approach}
+\input{novelty}
+\input{usefulness}
+\input{environments}
+\input{anomaly_types}
+\input{data_to_collect}
+\input{detection_method}
+\input{tools}
+\input{complete_taxonomy}
+\input{applications}
+\input{future_work}
+\input{examples}
+\input{conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{survey_bibtex}
+\end{document}

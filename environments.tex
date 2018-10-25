@@ -1,0 +1,37 @@
+\section{Environments}
+ There can be major differences in detection methodologies based on the type of environment. 
+ For example in cyber physical systems, such as the systems managing an electrical grid, there are very specific types of logs and highly tailored attacks. 
+ Whereas in a computer network comprising of tens or hundreds of hosts running one of several operating systems there are many types of data to collect, and many attack vectors to be aware of. 
+ Some methods may overlap but often times detection literature will specify if their proposed techniques are designed for detection in a specific environment. 
+ Agrawal et. al. propose a physics based method for detecting insider threats specifically in cyber physical systems\cite{agrawal2018poster}.
+The proposed taxonomy puts forth a separation of detect literature based on the following environment types: 
+\begin{enumerate}
+    \item General IT systems
+    \item Cyber Physical Systems
+    \item Embedded Systems
+\end{enumerate}
+An example of a general IT system environment is an enterprise network consisting of many, possibly thousands, of endpoints which run one of several operating systems (Windows, Linux, Mac) as well as networking gear. 
+
+\subsection{Environment Type Sub Classification}
+\begin{enumerate}
+    \item Is the Environment a general IT environment?
+    \item Does the paper specifically call out an operating system type?
+    \begin{enumerate}
+        \item Windows
+        \item Linux
+        \item Mac
+    \end{enumerate}
+    \item Is the environment a Cyber Physical System?
+        \begin{enumerate}
+            \item Does the paper specifically call out the CPS type?
+        \end{enumerate}
+    \item Is the environment an embedded system?
+        \begin{enumerate}
+            \item Is it a mobile device?
+            \begin{enumerate}
+                    \item Android
+                    \item Apple
+            \end{enumerate}
+        \end{enumerate}
+    \item Is the environment a wireless network?
+\end{enumerate}

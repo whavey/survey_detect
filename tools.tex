@@ -1,0 +1,31 @@
+\section{Tools}
+The final categorization for detection literature is to determine what tools are used in implementing the proposed detection method. 
+This subsection is less important but can still provide some interesting insight. 
+The reason it is less important is because often times it is not applicable. 
+For example, if the detection literature is discussing some novel algorithm the tool by which that algorithm is applied may not be relevant. 
+However, in the aforementioned case, a tool may still have been listed in the testing of that algorithm, and so future research may be done applying the algorithm using a different tool or tool set.
+
+This categorization level can provide insight into how a particular method can be perform better with a particular tool. 
+In some cases the tool is a primary focus of the literature such as in some examples involving Apache Spark.
+
+Similar to other categories the tools listed here are representative of what was most commonly observed in the literature studied for this survey. 
+
+The sub categorization of tools can be applied by defining whether the tool was one that the authors of the literature created themselves or one they implemented from some other creator(s). 
+If the authors implemented someone else' tool, they should discuss why that one was selected and whether or not they did any comparison with other options. 
+A potential use case for adding this level of classification is to see what methods a tool is not being used for that it potentially could be.
+
+\subsection{Tool Sub Classification}
+\begin{enumerate}
+    \item Novel
+    \item Existing \\
+    Some popular examples seen during the survey.
+    \begin{itemize}
+        \item SIEM \cite{kotenko2012attack}\\
+        System Information and Event Management
+        \item Weka \cite{asif2011filtering}\cite{thevar2017effect}
+        \item Apache Spark \cite{gupta2016framework}\cite{dobson2018performance}
+        \item Hadoop \cite{gupta2014big}\cite{tankard2012big}
+    \end{itemize}
+    \item Commercial \\
+    It is important to note that there are commercial detect solutions available and there are often white papers associated with those technologies, which would fall under the umbrella of cyber anomaly detection literature.
+\end{enumerate}

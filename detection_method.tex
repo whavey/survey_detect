@@ -1,0 +1,85 @@
+\section{Detection Methods}
+Detection methods are the real meat of cyber anomaly detection literature and so comprises the most critical and easily determined part of the taxonomy. 
+Many of the categories presented here can and have been broken down much further in other surveys. 
+It is recommended that for a deeper classification other surveys are explored in conjunction with what is presented below. 
+With that being said, there will be breakdowns of the categories presented here representing the most commonly observed detection strategies in the literature analyzed for this survey.
+
+The main classification model for detection methods is as follows. 
+The highest level splits detect literature by whether the proposed method is a direct detection method or a support method. 
+Direct detection is defined here as any method by which an anomaly detection is a direct result of the application of the method. 
+A support method is any method that does not itself result in a detection but instead assists in performing detections in general.
+
+Direct detections can be sub classified into three categories; machine learning techniques, analytics based techniques, and honey/canary techniques. 
+Some additional sub classifications will be presented below but by no means is it a comprehensive list of attack types. 
+
+Support methods can be sub classified into the following three categories; data organization, architecture, and query methods or languages. 
+Examples for each subcategory will be given below however some additional explanation may be necessary for the support methods. 
+Data organization is a support method for which detection literature may describe means for which store, retain, enrich, filter, and parse data. 
+The cyber detective can see that these actions don't in themselves lead to a detection but instead allow other methods to perform more efficiently. 
+Architecture is a support method classification for which the literature describes the system by which an analyst can perform their detect methods. 
+This may include discussions on the high level components required for a detect system down to specific tools that could be included. 
+Query methods or languages is a support method where the literature discusses ways of querying data which can include a new query language, or strategies such as querying data based on temporality. 
+This is distinct from but integrated with running analytics.
+
+\subsection{Other notes on Detection Methods}
+While there is a clear distinction between the three main direct detection categories there can and often is overlap between them. 
+It is plain to see how machine learning could be applied to analytic development. 
+By allowing machine learning to inform what behavior is common in an environment and analytic can be developed to detect if there is uncommon behavior being performed.
+
+Similarly, there can be overlap between the support methods described. 
+An obvious example is that a query method or language proposed may require data to be stored or tagged in specific way thus encompassed both the query method and data organization sub categories.
+
+An important sub classification that can be applied to all detection methods listed is whether or not the literature is discussing them in terms of automation or a manual process. 
+In other words, do the authors present a means for which the detection or support method can be performed/setup through code?
+
+A sub-categorization that can be made on detection literature is whether or not it discusses the human factor. 
+Cyber anomaly detection is quickly becoming a widely studied subject and there are new methods for detection proposed all the time; however at the end of the day, the decision that something that was detected is actually an anomaly (especially a malicious one) is made by a human. 
+Some literature will discuss how their methods actually performed in terms of the analysts that use it. 
+The literature may discuss the users training level or compare their method between multiple types of users. 
+In the same vein, the literature may go into specifics about the way alerts are shown to a user, or discuss the visualizations of the detections.
+
+\subsection{Detection Method Sub Classification}
+\begin{enumerate}
+    \item Optionally apply to all: Automation vs Manual.
+    \item Direct Detection
+        \begin{itemize}
+            \item Machine Learning\cite{buczak2016survey}\cite{dua2016data} 
+            \begin{itemize}
+                \item Training\\
+                It has been observed that a large amount of detection literature focusing on machine learning techniques make use of the Darpa data set for training. 
+                \item Algorithms
+                \begin{itemize}
+                    \item Two popular examples among the literature surveyed.
+                    \begin{itemize}
+                        \item Random Forest \cite{singh2014big}
+                        \item K-means\cite{asif2011filtering}\cite{hajamydeen2016unsupervised}
+                    \end{itemize}
+                \end{itemize}
+                \item clustering \cite{asif2011filtering}   
+                \item classifying
+                \item Regression analysis
+            \end{itemize}
+            \item Analytics\cite{cardenas2013big}
+                \item Attack Graphs\cite{abraham2015predictive}
+                \item Algorithms\cite{kim2013detection}
+            \item Honey and Canary Technology \cite{jasek2013apt}\cite{saud2015towards}
+        \end{itemize}
+    \item Support Method
+        \begin{itemize}
+             \item Data Organization
+                \begin{itemize}
+                    \item Tagging
+                \end{itemize}
+                \item Architecture
+                \item Query Languages\cite{mukherjee1994network}
+                \\ Query languages present an interesting detection mechanism that is heavily related to analytics as they provide a means for them to be created them on the fly.
+                Because of this, their effectivness is likely correlated with the skill and knowledge of the analyst.
+                This may be an interesting research topic.
+                \begin{itemize}
+                    \item Temporality \cite{abraham2015predictive}\cite{abraham2014cyber}
+                \end{itemize}
+                \item Behavior definition
+                    \begin{itemize}                                  \item White Lists\cite{yen2013beehive}
+                    \end{itemize}
+        \end{itemize}
+\end{enumerate}

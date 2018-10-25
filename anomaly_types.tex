@@ -1,0 +1,73 @@
+\section{Anomaly Types}
+The taxonomy puts forth a proposed subsection for classifying cyber anomaly types based on what was seen the most in surveying the literature. 
+There are already several that exist that can be used for this section of the overall classification. 
+Several surveys have already been written that address this topic. The Mitre "ATT\&CK" (Adversary Tactics Techniques and Cyber Killchain) framework may be appropriately be used here\cite{lazarevic2005intrusion}\cite{mitchell2014survey}\cite{axelsson2000intrusion}. 
+Hansman et. el. propose an attack type taxonomy based attack vectors\cite{hansman2005taxonomy}.
+This taxonomy proposes classifying anomaly types as one of five top level categories; Malware, Advanced Persistent Threat (APT), Insider threat, Specific threat, behavior in general. 
+
+Malware is a top level category because it is unique in that the detection mechanism is focused on determining that there is an executable file in the environment that can start and stop, be hidden, and be moved from system to system.
+This is different from just detecting a specific tactic since the encapsulation of the tactic in an executable file is what is being detected. 
+The categorization of malware analysis techniques is out of the scope of this paper, the focus here is the detection of the presence of the malware itself. 
+
+The APT is a top level category due to its distinct nature of being goal oriented. 
+Additionally APTs often perform their operations over a very long period of time causing the temporality of the data being queried to become an issue.  
+The uniqueness of APTs lie in the fact that the tactics, techniques, and procedures (TTPs) they use work in conjunction with each other to accomplish a mission over time. 
+The detection of an APT within an environment requires detecting more than one anomaly and being able to associate those anomalies over time in a way that points to the groups presence due to the relationship between them. 
+
+Insider threat is a top level category because the detection mechanisms have to recognize malicious intentions within the normal user operations. 
+In many types of detections the events extrapolated from the data themselves can point to malicious intent whereas in an insider threat scenario those events could look completely benign.\\
+The specific threat category is for literature that focuses on detecting a particular anomaly or malicious action. 
+Some examples include, a denial of service attack, SQL injection, or command and control channels. 
+
+Finally, the literature may not call out specifically what it is detecting from the above list.
+In this case it should be explicitly stated or at least possible to infer that it is claiming to do one of two things. 
+Those being; detect some subset of anomalous behavior in general or detect all anomalous behavior thereby encompassing all of the above categories.
+Some examples of the former being; detecting anomalous behavior just within a specific data source, or behaviour that is anomalous because it occurs during a specific time frame. 
+Additionally, literature classified as detecting general behavior can be sub classified into detecting suspicious behavior that requires further analysis or explicitly malicious behavior.
+
+\subsection{Distinctions}
+An important note is that APTs can and do use malware in their campaigns. 
+So a paper that is discussing the detection of the malware used by a specific APT without correlating that malware with any other TTPs should still fall under the malware category.
+
+Literature classified under the specific threat category may claim to provide a means to detect more than one specific threat however if it claims to detect the associations of these different anomalies with each other and a particular group it should fall under the APT category.
+
+\subsection{Anomaly Type Sub Classification}
+\cite{hansman2005taxonomy} \cite{hansman2005taxonomy} 
+\begin{enumerate}
+    \item Malware\cite{gabriel2009analyzing}\cite{tankard2011advanced}
+    \begin{enumerate}
+        \item Remote Access Trojans (RAT)\cite{wu2017detecting}
+    \end{enumerate}
+    \item APT
+    \item Insider Threat\cite{mukherjee1994network}
+    \item Specific Threat
+    \begin{enumerate}
+        \item Denial of Service (DOS) \cite{zargar2013survey}\cite{warrender1999detecting}\cite{lee1999data}
+        \\The literature may even break DOS attacks down further.
+        \begin{enumerate} 
+            \item Distributed
+            \item CPU Exhaust
+        \end{enumerate}
+        \item Surveillance and Probing \cite{lazarevic2005intrusion}
+        \begin{itemize}
+            \item Keylogger
+        \end{itemize}
+        \item Command and Control Channels (C2) \cite{chen2014study}\cite{jasek2013apt}\cite{bhatt2014towards}
+        \item Web Based Attacks
+        \begin{enumerate}
+            \item SQL Injection
+            \item Cross Site Scripting
+        \end{enumerate}
+        \item Embedded Systems Attacks
+        \item Zero Days \cite{kotenko2012common}\cite{chen2014study}\cite{jeun2012practical}
+        \item Side Channel Attacks
+        \item Botnets\cite{singh2014big}\cite{awad2017network}
+    \end{enumerate}
+    \item Behavior
+        \begin{enumerate}
+            \item Suspicious
+            \item Malicious
+            \item Subset
+            \item All
+        \end{enumerate}
+\end{enumerate}

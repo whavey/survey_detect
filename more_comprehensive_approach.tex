@@ -1,0 +1,61 @@
+\section{A more Comprehensive Approach}
+Breaking the above three questions down further however, will provide greater insight and separate literature further. \yanyan{Why do I want 
+to separate literature further?} 
+In addition to the three categories mentioned above \yanyan{I thought they are 3 questions, not 3 categories.} I propose two more here. 
+The first is to classify the literature by the environment being addressed, \yanyan{This should be in two separate sentences.} this step should be performed first. 
+The second is to classify the paper by whether or not any specific tool is used to implement the proposed methods. 
+This step should be performed last.
+
+\subsection{Questions to ask to assist in classifying the Literature}
+
+\begin{itemize}
+    \item Is a specific environment addressed?
+        \begin{itemize}
+            \item Are multiple environments addressed?\\
+            The literature may claim that the detection approaches presented work or even are intended to work in any environment, all environments, or a subset of environment types.
+        \end{itemize}
+    \item Is a specific type of attack addressed?
+    \begin{itemize}
+        \item Is only one type of attack addressed?
+        \item Are multiple types of attacks addressed? 
+        \yanyan{The first two can be combined as "How many types
+        of attacks are addressed."}
+        \item Does the literature claim to address all anomalies, or anomalies in general? \yanyan{What is the difference between
+        all anomalies and anomalies in general?}
+        \begin{itemize}
+            \item Does the literature claim to detect malicious behavior, suspicious behavior, just anomalies, or some combination of these?
+        \end{itemize}
+    \end{itemize}
+    \item Do the authors define the necessary data to collect in order to perform their detection method?
+        \begin{itemize}
+            \item Do the authors specify different data for the detection of different anomalies?
+        \end{itemize}
+    \item Are the authors proposing a specific method to perform a detection?\\
+    This sub category will be referred to as direct detection because the method itself when successfully deployed results in a detection of the anomaly. \yanyan{In last section you wrote "What  analysis 
+    methods  are  performed". These are different questions.}
+        \begin{itemize}
+            \item Is the method performed in an automated fashion? Or is the paper proposing an automated way to perform a known detection method that was previously manual?
+            \begin{itemize}
+                \item Is the method based off of a machine learning technique?
+                \item Is the method based off of "Honey" or "Canary" technology?
+                \item Is the method based off of analytics?\\
+            There may of course be some overlap among the above listed categories.
+            \end{itemize}
+        \end{itemize}
+    \item Are the authors proposing something that allows existing methods to perform better?\\
+    This sub category will be referred to as support method because the presented information does not result in a direct detection of an anomaly but assists other methods in their performance or effectiveness.
+    \begin{itemize}
+        \item Do they propose a framework or architecture?
+        \item Do they propose a way of organizing the data?
+        \item Do they propose a way querying the data?
+    \end{itemize}
+    \item Are the authors using a specific tool to implement the method of detection.
+    \begin{enumerate}
+        \item Is the tool the authors own creation? 
+        \item If a tool is not specified is it because there is no implementation or because the method could be applied using multiple available tools? Could the tool be considered irrelevant to the proposed method?
+    \end{enumerate}
+\end{itemize}
+Of course many more sub-criteria may exist that can be used for further refinement but the above list contains the primary factors used to classify detection literature. 
+Some examples of further refinement will be seen later in this paper.
+
+The above classification brings the cyber detective closer to a complete taxonomy for effective classification.

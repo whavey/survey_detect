@@ -1,0 +1,65 @@
+\section{Data to Collect}
+The dictionary defines an anomaly as "something that deviates from what is standard, normal, or expected". Clearly, the detection of an anomaly requires there to be some form of standard information for which that anomaly can deviate from. 
+It may be argued that the lack of information can also lead to a detection of some anomaly. 
+In either case detection literature should specify the data that needs to be collected and analyzed in order to perform the proposed detection method. 
+If it is not specified it should be implicit what the source is or if it is necessary to collect all possible data sources. 
+Additionally, it is helpful for the literature to specify the collection mechanisms, storage strategy and, if relevant, the retention period. 
+Data sources can be generally classified as belonging to one of four categories. 
+Those being, host based data sources, network based data sources, application based data sources, and sources external to the computing mechanisms of the environment. 
+Examples of the latter would be things like threat intelligence obtained from the internet, or more obscurely; electromagnetic field fluctuations given off from the internals of a running computer.
+
+The categories mentioned can be broken down further in the cases of host, and network based data. 
+For host based data, subcategories can include system calls, logs (which can be sub categorized further), performance counters, or agent based. 
+For network data subcategories can include the raw packets travelling over a network medium, abstracted 'netflow' information (source/destination ports/ips, session duration), and network device logs. 
+
+\subsection{Other Notes on Data collection}
+Ideally the classifiable literature should provide not only the data source to collect from, but also the format for which the detect method expects that data to be in. 
+Of course most data types will have a default format, but certain tools or methods may require that the format be converted to something more universal like json; a lightweight data interchange format\cite{crockford2009introducing}.
+
+Detection literature may not explicitly state the data source to collect. 
+If the source is not explicitly stated, it should be inferred what needs to be collected. 
+The source inference could be that all possible data should be collected. 
+Additionally, the source inference could be that one specific type should be collected but that source is obvious based on the method. 
+Finally, the source inference could be that one of many different types could be sufficient. 
+In the latter case there could potentially be overlap between different sources. 
+For example, there is much overlap between data collected from Windows event logs and the data collected from the Windows Sysmon Agent.
+
+Further breakdown of data sources could be in the form of event type distinctions. 
+A detect method may specify a need for one event type or one subset of event types. 
+For example a method for detecting persistence may require the collection of all windows registry related events.
+
+\subsection{Data Source Collected Sub Classification}
+\begin{enumerate}
+    \item Host Data\cite{jia2017big}\cite{marchetti2016analysis}
+    \begin{itemize}
+        \item System calls (syscalls) \cite{warrender1999detecting}\cite{hofmeyr1998intrusion}
+        \item Performance Counters
+        \item Event Logs
+    \end{itemize}
+    \item Network Data
+        \begin{itemize}
+            \item Network flow \cite{kim2013detection}
+            \begin{itemize}
+                \item Raw packets
+                \item Network flow data
+            \end{itemize}
+            \item Network Device Logs\cite{horne2002management}
+            \begin{itemize}
+                \item Routers
+                \item Switches
+                \item Firewalls
+            \end{itemize}
+        \end{itemize}
+    \item Application Data\cite{giura2012context}\cite{ten2010cybersecurity}
+    \\Application Logs is a broad category and encompasses any logging that is provided with software. Below are two special types of application logs worth calling out specifically.
+        \begin{enumerate}
+            \item Agents\cite{garcia2009anomaly}
+            \\Agents are a special type of software that are designed (in the context of this paper) to send security information to a system where specific events can be viewed by an analyst. 
+            There may be overlap between agents and the default logging mechanisms on the system but the agent is designed to collect specific information and forward it in a specific format.
+            \item Honeypots and Canarys\cite{jasek2013apt}
+            \\Honeypots are a special type of detection mechanism used to decieve an attacker typically used in conjunction with Canaries which are designed to immediately alert an analyst upon their access or the access of data around them.
+            Honeypot and canary data may come in various formats although typically in the form of network traffic. 
+            It is worth separating them from standard network based data because they provide such a specific function. 
+        \end{enumerate}
+    How does this model apply to devices such as Internet of Things (IOT) devices and Mobile devices.
+\end{enumerate}
